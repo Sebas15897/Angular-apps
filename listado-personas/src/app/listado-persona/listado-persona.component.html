@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <h1>Listado de personas</h1>
+    <hr />
+    <app-formulario (personaAgregada)="agregarPersona($event)"></app-formulario>
+  </div>
+</div>
+<br />
+<app-persona
+  *ngFor="let persona of personas; let i = index"
+  [index]="i"
+  [persona]="persona"
+>
+</app-persona>
